@@ -1,0 +1,32 @@
+{
+ "redef_churn_p50": 5.0,
+ "redef_churn_p95": 29.0,
+ "All commits": {
+  "n": 94710,
+  "buggy": 0.29816281279695916,
+  "la_auc": 0.7720344278981065,
+  "zero_la_buggy": 0,
+  "zero_la": 2898
+ },
+ "Single-file": {
+  "n": 27532,
+  "buggy": 0.10209937527241028,
+  "la_auc": 0.6742337478073155,
+  "zero_la_buggy": 0,
+  "zero_la": 1983
+ },
+ "Single-file, churn <= 29": {
+  "n": 21625,
+  "buggy": 0.0823121387283237,
+  "la_auc": 0.640771385541316,
+  "zero_la_buggy": 0,
+  "zero_la": 1592
+ },
+ "Single-file, churn <= 20, not fix": {
+  "n": 18004,
+  "buggy": 0.053265940902021774,
+  "la_auc": 0.6226583866358786,
+  "zero_la_buggy": 0,
+  "zero_la": 1516
+ }
+}

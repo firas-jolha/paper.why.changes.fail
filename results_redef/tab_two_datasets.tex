@@ -1,0 +1,22 @@
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lll}
+\toprule
+ & ApacheJIT & ReDef \\
+\midrule
+Labelling & SZZ-based, with filters & Revert commits, GPT-assisted triage \\
+Unit & Commit (Java, 14 projects) & Single-function change (C/C++, 22 projects) \\
+Changes (defect-inducing) & 94{,}710 (29.8\%) & 13{,}432 (23.6\%) \\
+Test changes & 24{,}690 (2017--2019) & 1{,}344 (latest 10\% per project) \\
+Categories measured & 8 (C1.1--1.3, C2.1--2.2, C3.1, C3.3, C4.2) & 4 (C1.1, C1.3, C2.3, C3.3) \\
+\midrule
+AUC, logistic regression & 0.862 & 0.543 \\
+AUC, gradient boosting & 0.883 & 0.573 \\
+PR-AUC, gradient boosting (base rate) & 0.764 (0.236) & 0.278 (0.236) \\
+Importance of size, AUC drop & 0.207 & 0.051 \\
+Importance of purpose, AUC drop & 0.086 & 0.004 \\
+\midrule
+AUC of lines added alone, test & 0.805 & 0.525 [0.490, 0.560] \\
+Median lines added, defective / clean & 138 / 19 & 3 / 3 \\
+Defective among changes with no added lines & 0 of 2{,}898 & 182 of 646 \\
+Defective rate, fix vs.\ other changes & 72.6\% vs.\ 24.4\% & 23.2\% vs.\ 24.1\% \\
+\botrule
+\end{tabular*}

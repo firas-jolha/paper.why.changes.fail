@@ -1,0 +1,201 @@
+{
+ "apache_nofix_feature": {
+  "auc": 0.8385404636922934,
+  "size_imp": 0.2251674431035168,
+  "imp": {
+   "C1.1 Change size": 0.2251674431035168,
+   "C1.2 Dispersion": 0.015090184916757798,
+   "C2.1 Change frequency": 0.007715615328085956,
+   "C2.2 Code age": 0.010660757984422408,
+   "C3.1 Experience": 0.025312152495995787,
+   "C3.3 Timing": 0.004603705359009802,
+   "C4.2 Ownership": 0.0035658446452086824
+  }
+ },
+ "apache_nonfix_commits": {
+  "auc": 0.8474599185689388,
+  "size_imp": 0.24687321667818757,
+  "n_test": 22133,
+  "buggy": 0.1890389915510776,
+  "la_auc": 0.8250746924550514
+ },
+ "apache_rf": {
+  "auc": 0.8779379184347126,
+  "prauc": 0.7539233512721802,
+  "imp": {
+   "C1.1 Change size": 0.1610577832444981,
+   "C1.2 Dispersion": 0.0273944943052149,
+   "C1.3 Change purpose": 0.07494768177168949,
+   "C2.1 Change frequency": 0.0025152941835652866,
+   "C2.2 Code age": 0.005574508865864902,
+   "C3.1 Experience": 0.016126419907462906,
+   "C3.3 Timing": 0.0012299947714558002,
+   "C4.2 Ownership": 0.0015825517233137854
+  }
+ },
+ "apache_perm_sd_max": 0.002633392749680348,
+ "cutoff_sensitivity": {
+  "0.9": {
+   "cutoff": 19.0,
+   "n": 19490,
+   "buggy": 0.07537198563365828,
+   "la_auc": [
+    0.6262760007432521,
+    0.611166930279654,
+    0.6393733898147
+   ],
+   "zero_la": 1514,
+   "zero_la_buggy": 0
+  },
+  "0.95": {
+   "cutoff": 29.0,
+   "n": 21625,
+   "buggy": 0.0823121387283237,
+   "la_auc": [
+    0.640771385541316,
+    0.6278754682879241,
+    0.6539287708552942
+   ],
+   "zero_la": 1592,
+   "zero_la_buggy": 0
+  },
+  "0.99": {
+   "cutoff": 65.0,
+   "n": 24733,
+   "buggy": 0.09068855375409372,
+   "la_auc": [
+    0.6504082955975679,
+    0.638928111289879,
+    0.6609378619398545
+   ],
+   "zero_la": 1759,
+   "zero_la_buggy": 0
+  }
+ },
+ "redef_rf": {
+  "auc": 0.567387170988976,
+  "prauc": 0.27565517033554876,
+  "imp": {
+   "C1.1 Change size": 0.05899990477916449,
+   "C1.3 Change purpose": 0.005616493477372831,
+   "C2.3 Touched-code size": 0.04359747388338222,
+   "C3.3 Timing": 0.008697041089326419
+  }
+ },
+ "redef_noise_null": {
+  "noise_mean": -0.002232114609026323,
+  "noise_p95": 0.007257901025620604,
+  "size_mean": 0.04239635519214643,
+  "size_min": 0.027660116906613054,
+  "purpose_mean": 0.0033168795825027054
+ },
+ "redef_detect": {
+  "test_ci": [
+   0.48511709624871957,
+   0.5600732559126257
+  ],
+  "all_ci": [
+   0.52327429310588,
+   0.5460817364426762
+  ],
+  "n_test_def": 317,
+  "n_test_clean": 1027,
+  "power_auc064_gt056": 1.0
+ },
+ "fix_by_project": {
+  "apache/activemq": {
+   "fix_share": 0.064,
+   "buggy": 0.229,
+   "p_bug_fix": 0.644
+  },
+  "apache/camel": {
+   "fix_share": 0.032,
+   "buggy": 0.136,
+   "p_bug_fix": 0.461
+  },
+  "apache/cassandra": {
+   "fix_share": 0.161,
+   "buggy": 0.382,
+   "p_bug_fix": 0.744
+  },
+  "apache/flink": {
+   "fix_share": 0.058,
+   "buggy": 0.24,
+   "p_bug_fix": 0.78
+  },
+  "apache/groovy": {
+   "fix_share": 0.071,
+   "buggy": 0.2,
+   "p_bug_fix": 0.632
+  },
+  "apache/hadoop-hdfs": {
+   "fix_share": 0.279,
+   "buggy": 0.764,
+   "p_bug_fix": 0.682
+  },
+  "apache/hadoop-mapreduce": {
+   "fix_share": 0.375,
+   "buggy": 0.634,
+   "p_bug_fix": 0.749
+  },
+  "apache/hbase": {
+   "fix_share": 0.198,
+   "buggy": 0.433,
+   "p_bug_fix": 0.72
+  },
+  "apache/hive": {
+   "fix_share": 0.348,
+   "buggy": 0.617,
+   "p_bug_fix": 0.811
+  },
+  "apache/ignite": {
+   "fix_share": 0.054,
+   "buggy": 0.203,
+   "p_bug_fix": 0.698
+  },
+  "apache/kafka": {
+   "fix_share": 0.182,
+   "buggy": 0.468,
+   "p_bug_fix": 0.814
+  },
+  "apache/spark": {
+   "fix_share": 0.089,
+   "buggy": 0.431,
+   "p_bug_fix": 0.815
+  },
+  "apache/zeppelin": {
+   "fix_share": 0.147,
+   "buggy": 0.429,
+   "p_bug_fix": 0.78
+  },
+  "apache/zookeeper": {
+   "fix_share": 0.172,
+   "buggy": 0.408,
+   "p_bug_fix": 0.806
+  }
+ },
+ "redef_projects": [
+  "ClickHouse",
+  "FFmpeg",
+  "blender",
+  "chromium",
+  "core",
+  "freebsd-src",
+  "godot",
+  "gstreamer",
+  "gtk",
+  "ladybird",
+  "linux",
+  "llvm-project",
+  "mesa",
+  "mongo",
+  "openssl",
+  "php-src",
+  "postgres",
+  "qemu",
+  "qtbase",
+  "systemd",
+  "vlc",
+  "wireshark"
+ ]
+}

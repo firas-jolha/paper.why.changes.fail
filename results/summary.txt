@@ -1,0 +1,7 @@
+all 76563 30111 0.293 0.193 {'LR': (0.847, 0.423, 0.538), 'GBT': (0.862, 0.452, 0.561)}
+no_hadoop 70020 24690 0.32 0.236 {'LR': (0.862, 0.464, 0.597), 'GBT': (0.884, 0.517, 0.637)}
+cond base 0.884
+{'boot': (0.961, 0.928), 'years': (0.568, 0.647), 'projects': (0.675, 0.505)} 14
+{'2009': 0.762, '2010': 0.79, '2011': 0.831, '2012': 0.851, '2013': 0.881, '2014': 0.882, '2015': 0.889, '2016': 0.887, '2017': 0.891, '2018': 0.887, '2019': 0.88}
+{'apache/activemq': 0.782, 'apache/camel': 0.792, 'apache/cassandra': 0.888, 'apache/flink': 0.823, 'apache/groovy': 0.824, 'apache/hadoop-hdfs': 0.964, 'apache/hadoop-mapreduce': 0.85, 'apache/hbase': 0.839, 'apache/hive': 0.893, 'apache/ignite': 0.874, 'apache/kafka': 0.819, 'apache/spark': 0.816, 'apache/zeppelin': 0.777, 'apache/zookeeper': 0.748}
+{'la-ld': np.float64(0.489), 'la-nf': np.float64(0.707), 'nf-nd': np.float64(0.844), 'nd-ns': np.float64(0.519), 'nf-ent': np.float64(0.962), 'ndev-nuc': np.float64(0.746), 'aexp-arexp': np.float64(0.989), 'aexp-asexp': np.float64(0.575), 'ndev-age': np.float64(0.089)}

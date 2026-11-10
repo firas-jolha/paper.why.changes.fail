@@ -1,0 +1,26 @@
+\begin{tabular*}{\linewidth}{@{\extracolsep\fill}p{8.6cm}l@{}}
+\toprule
+Check & Result \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Is the ReDef result informative?}} \\
+Chance of detecting an AUC of 0.64 (ApacheJIT small-change level) at ReDef's test size\textsuperscript{a} & 100\% \\
+AUC drop of a pure-noise feature on ReDef, mean (95th percentile), 20 runs & -0.002 (0.007) \\
+AUC drop of size on ReDef in the same runs, mean (minimum) & 0.042 (0.028) \\
+AUC drop of purpose on ReDef in the same runs, mean & 0.003 \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Does the FIX flag drive the ApacheJIT size effect?}} \\
+ApacheJIT model without the FIX feature: AUC; size AUC drop & 0.839; 0.225 \\
+ApacheJIT non-fix commits only: AUC; size AUC drop; AUC of lines added & 0.847; 0.247; 0.825 \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Is the granularity control sensitive to the cutoff?}} \\
+ApacheJIT single-file commits, churn $\leq$ 19 lines (ReDef 90th percentile, $n$ = 19{,}490): AUC of lines added & 0.626 [0.611, 0.639] \\
+ApacheJIT single-file commits, churn $\leq$ 29 lines (ReDef 95th percentile, $n$ = 21{,}625): AUC of lines added & 0.641 [0.628, 0.654] \\
+ApacheJIT single-file commits, churn $\leq$ 65 lines (ReDef 99th percentile, $n$ = 24{,}733): AUC of lines added & 0.650 [0.639, 0.661] \\
+ReDef, all changes: AUC of lines added & 0.534 [0.523, 0.546] \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Does the result depend on the model family?}} \\
+Random forest, ApacheJIT: AUC; size AUC drop; purpose AUC drop & 0.878; 0.161; 0.075 \\
+Random forest, ReDef: AUC; size AUC drop; purpose AUC drop & 0.567; 0.059; 0.006 \\
+\bottomrule
+\end{tabular*}
+\noindent{\footnotesize \textsuperscript{a} Share of 500 simulated test sets (317 defective, 1,027 clean changes, binormal scores with a true AUC of 0.64) in which the observed AUC exceeds 0.56.}
